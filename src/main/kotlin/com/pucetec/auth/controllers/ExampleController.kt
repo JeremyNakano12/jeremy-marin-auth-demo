@@ -24,4 +24,19 @@ class ExampleController {
         return "Admin action performed successfully!"
     }
 
+    @PostMapping("/user/action")
+    fun useraction(): String {
+        return "User action performed successfully!"
+    }
+
+    @PostMapping("/superuser/action")
+    fun superuser(): String {
+        return "Superuser action performed successfully!"
+    }
+
+    @GetMapping("/secure-data/action")
+    fun administrative(): String {
+        return "OK!"
+    }
+
 }

@@ -21,6 +21,9 @@ class SecurityConfig {
                         "/api/health"
                     ).permitAll()
                     .requestMatchers("/api/admin/**").hasRole("ADMINS")
+                    .requestMatchers("/api/user/**").hasAnyRole("ADMINS", "SUPERUSERS", "USERS")
+                    .requestMatchers("/api/superuser/**").hasRole("SUPERUSERS")
+                    .requestMatchers("/api/secure-data/**").hasAnyRole("ADMINS", "SUPERUSERS", )
                     .anyRequest().authenticated()
             }
             .oauth2ResourceServer { oauth2 ->
