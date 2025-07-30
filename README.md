@@ -210,6 +210,9 @@ La aplicación se ejecutará en: **http://localhost:8080**
 | `/api/health` | GET | Público | Health check de la aplicación |
 | `/api/hello` | GET | Autenticado | Endpoint protegido que requiere token válido |
 | `/api/admin/action` | POST | Solo ADMINS | Endpoint que requiere rol de administrador |
+| `/api/superuser/action` | POST | Solo SUPERUSERS | Endpoint que requiere rol de superusuario |
+| `/api/user/action` | POST | TODOS | Endpoint que requiere cualquier rol |
+| `/api/secure-data/action` | GET | Solo ADMINS Y SUPERUSERS | Endpoint que requiere rol de administrador o superusuario |
 
 ### Descripción de Seguridad
 
